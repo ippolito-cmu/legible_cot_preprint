@@ -1,0 +1,18 @@
+sampling_params:
+  max_tokens: 1024
+  temperature: 0.2
+  top_p: 0.95
+  top_k: 50
+  repetition_penalty: 1.1
+
+vllm_kwargs:
+  tensor_parallel_size: 1
+  pipeline_parallel_size: 1
+  gpu_memory_utilization: 0.95
+  enable_prefix_caching: true
+  enforce_eager: false
+  enable_chunked_prefill: true
+  disable_custom_all_reduce: false
+  max_num_seqs: 4096
+  max_num_batched_tokens: 65536
+  dtype: bfloat16
